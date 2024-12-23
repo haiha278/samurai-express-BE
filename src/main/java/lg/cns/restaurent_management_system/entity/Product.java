@@ -9,7 +9,7 @@ import lombok.Data;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer product_id;
+    private Integer productId;
 
     @Column(name = "prodcut_name", nullable = false)
     private String productName;
