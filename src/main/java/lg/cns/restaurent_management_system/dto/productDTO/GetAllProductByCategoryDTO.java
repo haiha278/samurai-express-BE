@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 
 public class GetAllProductByCategoryDTO {
+    private Integer productId;
     private String productName;
 
     private String description;
