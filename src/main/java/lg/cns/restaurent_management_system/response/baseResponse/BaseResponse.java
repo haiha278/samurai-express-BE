@@ -1,6 +1,5 @@
-package lg.cns.restaurent_management_system.dto.BaseResponse;
+package lg.cns.restaurent_management_system.response.baseResponse;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data

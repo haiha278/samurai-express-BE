@@ -1,4 +1,4 @@
-package lg.cns.restaurent_management_system.service;
+package lg.cns.restaurent_management_system.service.product;
 
 import lg.cns.restaurent_management_system.dto.productDTO.GetAllProductByCategoryDTO;
 import lg.cns.restaurent_management_system.dto.productDTO.ProductDetailDTO;

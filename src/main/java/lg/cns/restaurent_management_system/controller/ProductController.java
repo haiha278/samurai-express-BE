@@ -1,10 +1,9 @@
 package lg.cns.restaurent_management_system.controller;
 
-import lg.cns.restaurent_management_system.dto.BaseResponse.BaseResponse;
-import lg.cns.restaurent_management_system.dto.RequestObject.ProductRequestObject.ProductDetailRequestDTO;
+import lg.cns.restaurent_management_system.response.baseResponse.BaseResponse;
+import lg.cns.restaurent_management_system.dto.requestObject.productRequestObject.ProductDetailRequestDTO;
 import lg.cns.restaurent_management_system.dto.productDTO.GetAllProductByCategoryDTO;
-import lg.cns.restaurent_management_system.exception.ResourceNotFoundException;
-import lg.cns.restaurent_management_system.service.ProductService;
+import lg.cns.restaurent_management_system.service.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,14 +12,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/product")
 public class ProductController {
     @Autowired
     private ProductService productService;
-
-    @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<Object> handlerResourceNotFoundException(ResourceNotFoundException e) {
-        return new ResponseEntity<>(new BaseResponse<>(e.getMessage(), 404), HttpStatus.NOT_FOUND);
-    }
 
     @GetMapping("/product-list")
     public ResponseEntity<Object> getAllProductByCategory(@RequestParam String categoryName) {

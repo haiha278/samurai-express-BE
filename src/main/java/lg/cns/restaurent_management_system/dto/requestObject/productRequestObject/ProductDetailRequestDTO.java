@@ -1,4 +1,4 @@
-package lg.cns.restaurent_management_system.dto.RequestObject.ProductRequestObject;
+package lg.cns.restaurent_management_system.dto.requestObject.productRequestObject;
 
 import lombok.Data;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package lg.cns.restaurent_management_system.service;
+package lg.cns.restaurent_management_system.service.product;
 
 import lg.cns.restaurent_management_system.dto.productDTO.GetAllProductByCategoryDTO;
 import lg.cns.restaurent_management_system.dto.productDTO.ProductDetailDTO;
@@ -8,7 +8,6 @@ import lg.cns.restaurent_management_system.mapper.Mapper;
 import lg.cns.restaurent_management_system.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import software.amazon.awssdk.core.sync.RequestBody;

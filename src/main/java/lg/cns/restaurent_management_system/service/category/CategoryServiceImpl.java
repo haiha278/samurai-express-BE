@@ -1,4 +1,4 @@
-package lg.cns.restaurent_management_system.service;
+package lg.cns.restaurent_management_system.service.category;
 
 import lg.cns.restaurent_management_system.dto.categoryDTO.GetAllCategoryDTO;
 import lg.cns.restaurent_management_system.entity.Category;
@@ -22,7 +22,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public List<GetAllCategoryDTO> getAllCategoryDtoList() {
-        List<Category> categoryList = categoryRepository.findAllCategory();
+        List<Category> categoryList = categoryRepository.findAll();
         if (categoryList == null){
             throw new ResourceNotFoundException("Can not found any category");
         }
