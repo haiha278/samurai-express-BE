@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "OrderTable")
@@ -32,4 +33,6 @@ public class Order {
     @Column(name = "note")
     private String note;
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+    private List<OrderDetail> orderDetail;
 }
